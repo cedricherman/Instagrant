@@ -1,0 +1,28 @@
+AVAILABLE FROM API:
+title
+abstract
+agency (list of agency and branch!, some have duplicate agency)
+program (SBIR or STTR)
+phase (I or II)
+year
+firm (company name)
+research institution
+
+
+
+WHAT I NEED TO SCRAPE:
+Agency
+Branch
+Amount
+Company address
+PI Name and title
+Business Contact Name and title
+DUNS (Small Business Identification Number)
+Solicitation Year
+Solicitation Topic Code
+Sollicitation number
+Contract
+Agency Tracking Number
+HUBZone Owned
+Woman Owned
+Socially and Economically Disadvantage

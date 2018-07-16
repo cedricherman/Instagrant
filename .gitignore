@@ -1,0 +1,7 @@
+.*
+notebooks/.*
+!.gitignore
+data/
+reports/*.docx
+reports/*.pptx
+reports/*.tmp
