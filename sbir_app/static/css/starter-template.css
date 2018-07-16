@@ -1,0 +1,23 @@
+body {
+  padding-top: 50px;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+.navbar-default {
+  background-color:#3680e3 !important;
+
+}
+.navbar-brand {
+  color: #F0FFFF !important;
+
+}
+.logo {
+  width: auto;
+  height: 130px;
+}
+.agn_logo {
+  width: auto;
+  height: 90px;
+}

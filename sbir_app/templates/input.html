@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Home Page</title>
+
+    <!-- Custom styles for this template -->
+    <link href="../static/css/starter-template.css" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-default navbar-fixed-top" >
+      <div class="container">
+        <div class="navbar-header" >
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Instagrant</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+
+<div class="container">
+
+    <div class="starter-template">
+      <img src={{url_for('static', filename='images/sbir-sttr-logo.png')}} class="logo" alt="sbir-sttr-logo">
+    </div>
+
+    <div class="starter-template">
+      <img  src="{{url_for('static', filename='images/')}}{{agency_logo}}" class="agn_logo"  alt="department-of-education">
+      <h2 align="center" style="font-size:18pt;">{{agency}}</h2>
+      <!--<h3 align="center" name="model_id">{{agency_id}}</h3> -->
+    </div>
+  </div>
+
+   <div class = "container">
+
+     <form action="/output" method="GET">
+       <div class="form-group">
+         <!-- pass agency_id as value to get function-->
+         <input type="hidden" name="model_id" value = "{{agency_id}}"></h3>
+         <!-- <h3 align="center" name="model_id">agency</h3>  -->
+
+         <label for="abstract" style="font-size:14pt;">Enter summary here:</label>
+         <textarea class="form-control" name="abstract" rows="10" style="font-size:14pt;">
+The broader impact/commercial potential of this Small Business Innovation Research (SBIR) project is to develop technology that will substantially reduce the cost and complexity of ribonucleic acid (RNA)-based medical testing. Isolation of RNA from biological samples is the first and often the most difficult step in RNA diagnostic testing. All living things from bacteria to humans are threatened by viral infection and have strong natural defenses; these protein defenses are beneficial to humans but interfere with RNA testing. DNA contamination also interferes with RNA testing. As a result, there is a $2.3B market for reagents to clean-up protein and DNA contamination in RNA samples. The proposed product selectively isolates RNA from samples with near perfect selectivity, eliminating the need for these expensive RNA clean-up reagents. Simplification of the RNA isolation step has the broader impact of allowing for smaller and easier to operate devices that can be deployed to local clinics, allowing for easier and faster testing in point-of-care and rural settings. This SBIR Phase I project proposes to develop a new carbon-based coating for magnetic beads that selectively isolates RNA from samples with better yield than current products and without ddDNA or protein contamination. The company has developed a preliminary technology that performs better than competing products when used to isolate RNA from cultured cells. During this Phase I project, the material properties and usage protocols will be optimized to maximize performance in real-world applications, such as isolation of RNA from blood. The material properties as they relate to performance in this application will be studied using x-ray photoelectron spectroscopy (XPS) and optimized to maximize selectivity for RNA over contaminating molecules such as DNA and proteins. RNA will be isolated from diverse biological substances such as soft tissue, blood, and cell cultures, and each step in the process will be optimized to maximize yield and RNA integrity (RIN) while maintaining perfect purity as determined by northern blot, fluorescence spectroscopy, and qRT-PCR. The company also will begin to explore a manufacturing system for commercial production of the material.
+         </textarea>
+       </div>
+       <div>
+         <button type="submit" class="btn btn-primary btn-lg">Estimate $$</button>
+       </div>
+
+     </form>
+   </div>
+
+   <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+   <script src="static/js/bootstrap.min.js"></script>
+
+ </div> <!-- /.container-->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="static/js/bootstrap.min.js"></script>
+  </body>
+</html>
