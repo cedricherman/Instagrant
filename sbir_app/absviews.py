@@ -1,16 +1,10 @@
-from flask import render_template, url_for
-from sbir_app import app
-from flask import request
-from sbir_app import gs_reg
-# from sbir_app import federal_m
-from sbir_app import agency_name, agency_logo
-# from sbir_app.federal_grant_model import PredictAmount
-# from sqlalchemy import create_engine
-# from sqlalchemy_utils import database_exists, create_database
 import pandas as pd
 import numpy as np
+
+from flask import request, render_template, url_for
 from pymongo import MongoClient
-# import psycopg2
+from sbir_app import app, agency_name, agency_logo, gs_reg
+
 
 # Create a client connection to the MongoDb instance running on the local machine
 client = MongoClient('localhost:27017')
@@ -68,5 +62,6 @@ def cesareans_output():
      # get corresponding quantile to dollar amount
      percentile = pl_y[pl_x <= dollars].max()
 
-     return render_template("output.html", the_result = '$ {:,.0f}'.format(dollars),  percentile = '{:.0f}th percentile'.format(percentile*100) )
-     # return render_template("output.html", the_result = '$ {:,.0f}'.format(dollars),  percentile = percentile )
+     return render_template("output.html",
+                            the_result = '$ {:,.0f}'.format(dollars),
+                            percentile = '{:.0f}th percentile'.format(percentile*100) )

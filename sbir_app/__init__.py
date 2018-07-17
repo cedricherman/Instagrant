@@ -1,22 +1,17 @@
-from flask import Flask
-app = Flask(__name__)
+import glob
+import os
 
+from flask import Flask
+from sbir_app import absviews
 from sklearn.externals import joblib
 from utils import utilsvectorizer as uv
-import os
-import glob
 
+
+# create app instance
+app = Flask(__name__)
+
+# load model at app startup
 gs_reg = joblib.load(os.path.join('.','models', 'Lasso_reg_phase1.pkl'))
-
-
-# fed_models = glob.glob(os.path.join('.', 'models', '*.pkl'))
-# federal_m = {}
-# print('Loading models')
-# for fed in fed_models:
-#     # get filename (basename) and remove extension
-#     model_name = os.path.basename(fed).split('.')[0]
-#     # load this model into model dict
-#     federal_m[model_name] = joblib.load(fed)
 
 
 # dictionary of agency acronym to agency denomination
@@ -32,6 +27,7 @@ agency_name = {'usda' : 'Department of Agriculture',
                 'nasa' : 'National Aeronautics and Space Administration',
                 'nsf' : 'National Science Foundation'}
 
+# mapping for agency logo
 agency_logo = {'usda' : 'usda.png',
                 'doc' : 'department-of-commerce.png',
                 'dod' : 'dod.png',
@@ -43,8 +39,3 @@ agency_logo = {'usda' : 'usda.png',
                 'epa' : 'enviromental-protection-agency.png',
                 'nasa' : 'nasa.png',
                 'nsf' : 'nsf.png'}
-
-
-
-
-from sbir_app import absviews
