@@ -6,7 +6,9 @@ applicants can have a starting point for their budget.
 See this [presentation](https://github.com/cedricherman/Instagrant/blob/master/presentation/Cedric_Herman_Demo.pdf) for an overview of this project.
 
 notebooks folder contains prototypes.
+
 src folder hosts cleaned final version for production implementation.
+
 sbir_app is a [flask application](http://entrepreneurgrants.science/) hosted on AWS that implements my model alongside css/html code.
 
 
