@@ -13,7 +13,7 @@ db = client.awards_tmp
 
 
 @app.route('/')
-@app.route('/index')
+@app.route('/home')
 def home_select_agency():
      return render_template("home.html")
 
